@@ -14,6 +14,8 @@ import org.openqa.selenium.interactions.Actions;
 
 public class US52_VehicleContracts_StepDefs {
 
+    // I used browser2=firefox for my test. For running test change property to browser2
+
     LoginPage loginPage = new LoginPage();
     VehicleContractsPage vehicleContractsPage = new VehicleContractsPage();
     DashboardPage dashboardPage = new DashboardPage();
