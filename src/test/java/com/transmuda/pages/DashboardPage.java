@@ -21,6 +21,9 @@ public class DashboardPage extends BasePage {
     @FindBy (xpath = "//span[.='Vehicle Contracts']")
     public WebElement vehicleContractsOption;
 
+    @FindBy (xpath = "//span[.='Vehicle Costs']")
+    public WebElement vehicleCost;
+
     @FindBy(xpath = "//div[.='You do not have permission to perform this action.']")
     public WebElement noPermissionMessage;
 
