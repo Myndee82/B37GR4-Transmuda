@@ -12,16 +12,18 @@ public class VehicleCostPage {
     }
 
 
-    @FindBy(xpath = "(//span[@class='grid-header-cell__label'])[1]")
+    @FindBy(xpath = "//th[2]/a/span[1]")
     public WebElement type;
 
-    @FindBy(xpath = "(//span[@class='grid-header-cell__label'])[2]")
+
+
+    @FindBy(xpath = "//th[3]/a/span[1]")
     public WebElement totalPrice;
 
-    @FindBy(xpath = "(//span[@class='grid-header-cell__label'])[3]")
+    @FindBy(xpath = "//th[4]/a/span[1]")
     public WebElement date;
 
-    @FindBy(xpath = "(//input[@type='checkbox'])[4]")
+    @FindBy(xpath = "//div/button/input")
     public WebElement checkBoxSelectAll;
 
 
