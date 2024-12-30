@@ -53,6 +53,8 @@ public class BrowserUtils {
     public static void verifyTitle(String expectedTitle){
         Assert.assertEquals(Driver.getDriver().getTitle(), expectedTitle);
     }
+
+
     public static void verifyTitleContains( String expectedInTitle){
         Assert.assertTrue(Driver.getDriver().getTitle().contains(expectedInTitle));
     }
