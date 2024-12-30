@@ -5,7 +5,7 @@ Feature: Users should be able to access to the Oroinc Documentation page.
     Given the user is on the login page
 
 
-  @oronic
+  @US50
   Scenario Outline: Verify  that driver can access to the Oroinc Documentation page
     Given the user logged in as "<userType>"
     Then user is clicking the question mark icon
