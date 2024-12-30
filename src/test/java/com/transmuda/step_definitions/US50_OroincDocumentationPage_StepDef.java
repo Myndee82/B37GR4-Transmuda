@@ -24,7 +24,10 @@ public class US50_OroincDocumentationPage_StepDef {
 
     @Then("user should be able to see Oroinc Documentation Page")
     public void user_should_be_able_to_see_oroinc_documentation_page() {
+        //wait for the page to load
         BrowserUtils.sleep(3);
+
+        //Switch to a new window
         Set<String> allWindowHandles = Driver.getDriver().getWindowHandles();
 
         for (String each : allWindowHandles) {
@@ -34,12 +37,9 @@ public class US50_OroincDocumentationPage_StepDef {
             }
         }
 
-
+        //Assert: url is equal to "https://doc.oroinc.com/"
         String actualURL = Driver.getDriver().getCurrentUrl();
-        System.out.println(actualURL);
-
         String expectedURL = "https://doc.oroinc.com/";
-        System.out.println("expectedURL = " + expectedURL);
 
         Assert.assertEquals(expectedURL, actualURL);
     }
