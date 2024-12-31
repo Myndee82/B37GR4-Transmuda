@@ -5,10 +5,8 @@ Feature: Managing filters on the Vehicle Cost Page
   Background:
     Given the user is on the login page
 
-  Scenario: Verify that Store managers and Sales managers are able to manage filters on the Vehicle Cost page
-    When Store Manager user enters valid username "storemanager61"
-    And  Store Manager user enters valid password "UserUser123"
-    And User should see Dashboard page
+  Scenario Outline: Verify that Store managers and Sales managers are able to manage filters on the Vehicle Cost page
+    Given the user logged in as "<userType>"
     And User clicks on Fleet Module
     And User select Vehicle Cost Option
     Then Verify columns name
@@ -16,13 +14,21 @@ Feature: Managing filters on the Vehicle Cost Page
       | TOTAL PRICE |
       | DATE        |
 
+    Examples:
+      | userType      |
+      | store manager |
+      | sales manager |
 
-  Scenario: Verify that user can check the first checkbox to select All Vehicle Costs
-    When Store Manager user enters valid username "storemanager61"
-    And  Store Manager user enters valid password "UserUser123"
-    And User should see Dashboard page
+
+  Scenario Outline: Verify that user can check the first checkbox to select All Vehicle Costs
+    Given the user logged in as "<userType>"
     And User clicks on Fleet Module
     And User select Vehicle Cost Option
     Then User select first checkbox to select All Vehicle Costs
+
+    Examples:
+      | userType      |
+      | store manager |
+      | sales manager |
 
 
