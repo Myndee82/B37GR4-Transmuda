@@ -6,7 +6,7 @@ Feature: Description field of calender event
   Background:
     Given the user logged in as "sales manager"
 
-  @wip
+
   Scenario: Verify that users can type messages in to the Description field on the Calendar
   Events page.
     Given user is on the home page of application and title is "Dashboard"
