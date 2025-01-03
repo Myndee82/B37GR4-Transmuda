@@ -1,4 +1,4 @@
-US58
+@US58
 Feature: Description field of calender event
 
   User Story: As a user, I should be able to type into the Description field when I create a calendar
