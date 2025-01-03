@@ -1,3 +1,4 @@
+@US58
 Feature: Description field of calender event
 
   User Story: As a user, I should be able to type into the Description field when I create a calendar
@@ -6,7 +7,7 @@ Feature: Description field of calender event
   Background:
     Given the user logged in as "sales manager"
 
-  @wip
+
   Scenario: Verify that users can type messages in to the Description field on the Calendar
   Events page.
     Given user is on the home page of application and title is "Dashboard"
