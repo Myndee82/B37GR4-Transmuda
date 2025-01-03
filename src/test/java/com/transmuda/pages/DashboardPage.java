@@ -12,9 +12,32 @@ public class DashboardPage extends BasePage {
     }
 
 
-
+    //locators for Driver,Sales and Store Manager
     @FindBy(linkText = "Fleet")
     public WebElement fleetModule;
+
+    @FindBy (linkText = "Customers")
+    public WebElement customersModule;
+
+    @FindBy (linkText = "Activities")
+    public WebElement activitiesModule;
+
+    @FindBy(linkText = "System")
+    public WebElement systemModule;
+
+    @FindBy(linkText = "Dashboards")
+    public WebElement dashboardsModule;
+
+    @FindBy(linkText = "Sales")
+    public WebElement salesModule;
+
+    @FindBy(linkText = "Reports & Segments")
+    public WebElement reportsSegmentsModule;
+
+    @FindBy(linkText = "Marketing")
+    public WebElement marketingModule;
+
+
 
 
 
@@ -26,5 +49,13 @@ public class DashboardPage extends BasePage {
 
     @FindBy(xpath = "//div[.='You do not have permission to perform this action.']")
     public WebElement noPermissionMessage;
+
+
+
+
+
+
+
+
 
 }
