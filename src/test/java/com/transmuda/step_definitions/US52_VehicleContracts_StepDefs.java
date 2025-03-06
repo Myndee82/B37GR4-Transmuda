@@ -28,18 +28,24 @@ public class US52_VehicleContracts_StepDefs {
 
     @And("User clicks on Fleet Module")
     public void user_clicks_on_fleet_module() {
-        actions.moveToElement(dashboardPage.fleetModule).click().perform();
+        BrowserUtils.waitForVisibility(dashboardPage.fleetModule,10);
+        BrowserUtils.hover(dashboardPage.fleetModule);
 
     }
     @And("User select Vehicle Contracts Option")
     public void user_select_vehicle_contracts_option() {
-        actions.moveToElement(dashboardPage.vehicleContractsOption).click().perform();
+        BrowserUtils.clickWithJS(dashboardPage.vehicleContractsOption);
     }
 
     @Then("User should see Vehicle Contracts Page with title {string}")
-    public void user_should_see_vehicle_contracts_page_with_title(String title) {
+    public void user_should_see_vehicle_contracts_page_with_title(String expectedTitle) {
         BrowserUtils.sleep(5);
-       BrowserUtils.verifyTitle(title);
+        System.out.println("expectedTitle = " + expectedTitle);
+        String actualTitle = Driver.getDriver().getTitle();
+        System.out.println("actualTitle = " + actualTitle);
+        BrowserUtils.verifyTitle(expectedTitle);
+
+
 
     }
 
